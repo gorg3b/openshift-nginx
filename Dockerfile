@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:latest
 
 # Define mountable directories.
 VOLUME ["/usr/share/nginx"]
