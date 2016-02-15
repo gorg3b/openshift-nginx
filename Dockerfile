@@ -5,7 +5,10 @@ FROM nginx:latest
 EXPOSE 80
 
 # Run as root
-USER root:root
+USER daemon:daemon
 
 # Volume for Storage
 VOLUME ["/var/www/"]
+
+# Start nginx
+CMD ["/etc/init.d/nginx start"]
