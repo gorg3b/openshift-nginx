@@ -8,5 +8,4 @@ EXPOSE 80
 VOLUME ["/var/www/"]
 
 # Start nginx
-
-CMD service nginx start 
+CMD ["nginx"]
