@@ -9,3 +9,4 @@ VOLUME ["/var/www/"]
 
 # Start nginx
 
+CMD ["/etc/init.d/nginx start"]
