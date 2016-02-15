@@ -4,7 +4,7 @@ FROM nginx:latest
 VOLUME ["/usr/share/nginx"]
 
 # Define working directory.
-WORKDIR /etc/nginx
+WORKDIR ["/etc/nginx"]
 
 # Define default command.
 CMD ["nginx"]
