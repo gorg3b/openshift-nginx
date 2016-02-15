@@ -6,7 +6,7 @@ RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 VOLUME ["/usr/share/nginx"]
 
 # Define working directory.
-WORKDIR ["/etc/nginx"]
+WORKDIR /etc/nginx
 
 # Define default command.
 CMD ["nginx"]
