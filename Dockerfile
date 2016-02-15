@@ -11,4 +11,4 @@ USER daemon:daemon
 VOLUME ["/var/www/"]
 
 # Start nginx
-CMD ["/etc/init.d/nginx start"]
+#CMD ["/etc/init.d/nginx start"]
