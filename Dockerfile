@@ -4,9 +4,9 @@ FROM nginx:latest
 # Prepare nginx for Openshift (change path of the conf Variables) & disable nginx daemon-mode
 RUN \
 # Run nginx in fg (docker req)  
-  echo "\ndaemon off;"  >>  /etc/nginx/nginx.conf
+  echo "\ndaemon off;"  >>  /etc/nginx/nginx.conf && /
 # Change the location of conf.d directory
-#  sed --in-place 's/etc/usr\/share/g'  /etc/nginx/nginx.conf
+  sed --in-place 's/etc/usr\/share/g'  /etc/nginx/nginx.conf
 
 # Define mountable directories.
 VOLUME ["/usr/share/nginx"]
