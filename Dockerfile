@@ -5,9 +5,9 @@ FROM nginx:latest
 RUN echo \
 
 # Run nginx in fg (docker req)  
-  "\ndaemon off;" >> /etc/nginx/nginx.conf && \
+  "\ndaemon off;"   >>  /etc/nginx/nginx.conf && \
 # Change the location of conf.d directory
-  sed 's/etc/usr\/share/g' nginx.conf
+  sed --in-place        's/etc/usr\/share/g' nginx.conf
 
 
 # Define mountable directories.
