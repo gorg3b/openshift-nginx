@@ -15,7 +15,7 @@ VOLUME ["/usr/share/nginx"]
 WORKDIR /etc/nginx
 
 # Define default command.
-CMD ["/bin/bash","nginx"]
+CMD ["nginx"]
 
 # Expose ports.
 EXPOSE 80
