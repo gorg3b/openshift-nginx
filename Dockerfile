@@ -21,4 +21,4 @@ USER["1000050000:1000050000"]
 CMD ["nginx"]
 
 # Expose ports.
-EXPOSE 80
+EXPOSE ["80","443"]
