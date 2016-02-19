@@ -2,7 +2,7 @@ FROM nginx:latest
 
 # install curl for debugging
 
-RUN apt-get update && apt-get install -y
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 
 # Prepare nginx for Openshift (change path of the conf Variables) & disable nginx daemon-mode
