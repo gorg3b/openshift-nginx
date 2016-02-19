@@ -3,9 +3,6 @@ FROM nginx:latest
 
 # Prepare nginx for Openshift (change path of the conf Variables) & disable nginx daemon-mode
 RUN \
-# install curl
-  apt-get install -y curl && \ 
-
 # Run nginx in fg (docker req)
   echo "\ndaemon off;"  >>  /etc/nginx/nginx.conf && \
 # Change the location of conf.d directory
@@ -16,6 +13,9 @@ VOLUME ["/usr/share/nginx"]
 
 # Define working directory.
 WORKDIR /etc/nginx
+
+USER["1000050000:1000050000"]
+
 
 # Define default command.
 CMD ["nginx"]
