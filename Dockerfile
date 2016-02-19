@@ -14,7 +14,7 @@ VOLUME ["/usr/share/nginx"]
 # Define working directory.
 WORKDIR /usr/share/nginx
 
-USER["1000050000:1000050000"]
+USER 1000050000:1000050000
 
 
 # Define default command.
